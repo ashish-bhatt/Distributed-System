@@ -1,0 +1,16 @@
+package msg;
+
+message Packet
+{
+
+	enum PacketType
+	{
+	    CONN_REQ = 0;
+	    DATA = 1;
+	    HEART_BEAT = 2;
+	}
+
+
+    required PacketType pType = 1 [default = DATA];
+    optional string data = 2;
+}
